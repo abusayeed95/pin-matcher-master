@@ -31,6 +31,18 @@ body {
     outline: none;
     box-shadow: none;
 }
+#codeDisplay{
+    background-color: #3D4153;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+#keyPadDisplay{
+    background-color: #3D4153;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+}
 
 input[type='text']{
     background-color: #3D4153;
@@ -103,6 +115,11 @@ color: #E0B612;
 .action-left {
     color: #FF3C5F;
     margin-top: 10px;
+}
+#loserArea{
+    color: #FF3C5F;
+    margin-top: 10px;
+    display: none;
 }
 #notMatched{
     display: none;
