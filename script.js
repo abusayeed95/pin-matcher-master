@@ -17,29 +17,38 @@ document.getElementById('submit').addEventListener('click', function () {
     var keyPadDisplay = document.getElementById('keyPadDisplay').value;
     var keyPadDisplayValue = parseInt(keyPadDisplay);
 
-    if (codeDisplay == '') {
-        alert('hey Mr.....! first generate a code')
-    }
+    document.getElementById('actionLeft').innerText = document.getElementById('actionLeft').innerText - 1;
 
-    if (codeDisplayValue == keyPadDisplayValue) {
-        document.getElementById('matched').style.display = 'block';
+    if (codeDisplay == '') {
+        alert('Hello!! Sir, generate a code first');
         document.getElementById('notMatched').style.display = 'none';
     }
 
-    if (codeDisplayValue !== keyPadDisplayValue) {
-        document.getElementById('notMatched').style.display = 'block';
-        document.getElementById('matched').style.display = 'none';
-    }
+    else {
+        if (codeDisplayValue == keyPadDisplayValue) {
+            document.getElementById('matched').style.display = 'block';
+            document.getElementById('notMatched').style.display = 'none';
+        }
 
-    document.getElementById('actionLeft').innerText = document.getElementById('actionLeft').innerText - 1;
+        if (codeDisplayValue !== keyPadDisplayValue) {
+            document.getElementById('notMatched').style.display = 'block';
+            document.getElementById('matched').style.display = 'none';
+        }
 
-    if (document.getElementById('actionLeft').innerText == 1) {
-        alert('Think twice before submit... Only 1 try left');
-    }
+        if (document.getElementById('actionLeft').innerText == 1) {
+            alert('Think twice before submit... Only 1 try left');
+        }
 
-    if (document.getElementById('actionLeft').innerText == 0) {
-        document.getElementById('submit').style.display = 'none';
-        document.getElementById('actionLeftArea').style.display = 'none';
-        document.getElementById('loserArea').style.display = 'block';
+        if (document.getElementById('actionLeft').innerText == 0) {
+            document.getElementById('submit').style.display = 'none';
+            document.getElementById('actionLeftArea').style.display = 'none';
+            document.getElementById('loserArea').style.display = 'block';
+        }
+
+        if (document.getElementById('matched').style.display == 'block') {
+            document.getElementById('actionLeftArea').style.display = 'none';
+            document.getElementById('submit').style.display = 'none';
+            document.getElementById('loserArea').style.display = 'none';
+        }
     }
 })
