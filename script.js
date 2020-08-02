@@ -20,19 +20,20 @@ document.getElementById('submit').addEventListener('click', function () {
     document.getElementById('actionLeft').innerText = document.getElementById('actionLeft').innerText - 1;
 
     if (codeDisplay == '') {
-        alert('Hello!! Sir, generate a code first');
-        document.getElementById('notMatched').style.display = 'none';
+        document.getElementById('genPin').style.display = 'block';
     }
 
     else {
         if (codeDisplayValue == keyPadDisplayValue) {
             document.getElementById('matched').style.display = 'block';
             document.getElementById('notMatched').style.display = 'none';
+            document.getElementById('genPin').style.display = 'none';
         }
 
         if (codeDisplayValue !== keyPadDisplayValue) {
             document.getElementById('notMatched').style.display = 'block';
             document.getElementById('matched').style.display = 'none';
+            document.getElementById('genPin').style.display = 'none';
         }
 
         if (document.getElementById('actionLeft').innerText == 1) {
@@ -49,6 +50,7 @@ document.getElementById('submit').addEventListener('click', function () {
             document.getElementById('actionLeftArea').style.display = 'none';
             document.getElementById('submit').style.display = 'none';
             document.getElementById('loserArea').style.display = 'none';
+            document.getElementById('reloadMsg').style.display = 'block'
         }
     }
 })

@@ -26,6 +26,11 @@ body {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
+    transition: .3s ease-in-out;
+}
+.generate-btn:hover{
+    border: 8px solid #495BC3;
+    background-color: #39458C;
 }
 .generate-btn:focus{
     outline: none;
@@ -88,6 +93,58 @@ margin-right: -4px;
 border-radius: 10px;
 cursor: pointer;
 }
+.button:hover{
+    animation: button 1s ease-in-out infinite forwards ;
+}
+@keyframes button{
+    0%{
+        background-image: linear-gradient(0deg,#495BC3,#7a83b6);
+    }
+    33%{
+        background-image: linear-gradient(90deg,#495BC3,#7a83b6);
+    }
+    66%{
+        background-image: linear-gradient(180deg,#495BC3,#7a83b6);
+    }
+    100%{
+        background-image: linear-gradient(360deg,#495BC3,#7a83b6);
+    }
+}
+
+#clear:hover{
+    animation: clear 1s ease-in-out infinite forwards ;
+}
+@keyframes clear{
+    0%{
+        background-image: linear-gradient(0deg#ff0000,#b82c2c);
+    }
+    33%{
+        background-image: linear-gradient(90deg,#ff0000,#b82c2c);
+    }
+    66%{
+        background-image: linear-gradient(180deg,#ff0000,#b82c2c);
+    }
+    100%{
+        background-image: linear-gradient(360deg,#ff0000,#b82c2c);
+    }
+}
+#back:hover{
+    animation: back 1s ease-in-out infinite forwards ;
+}
+@keyframes back{
+    0%{
+        background-image: linear-gradient(0deg#ff0000,#b82c2c);
+    }
+    33%{
+        background-image: linear-gradient(90deg,#ff0000,#b82c2c);
+    }
+    66%{
+        background-image: linear-gradient(180deg,#ff0000,#b82c2c);
+    }
+    100%{
+        background-image: linear-gradient(360deg,#ff0000,#b82c2c);
+    }
+}
 .blink-me {
 color: #E0B612;
 }
@@ -98,6 +155,10 @@ color: #E0B612;
     border-radius: 5px;
     background: #495BC3;
     color: #fff;
+    transition: .3s ease;
+}
+.submit-btn:hover{
+    background-image: linear-gradient(to right,#495BC3,#979cb9,#495BC3 )
 }
 .notify {
     color: #fff;
@@ -108,7 +169,14 @@ color: #E0B612;
     border-radius: 15px;
     padding: 5px 20px;
     display: none;
+    animation: opacity .3s ease;
+    font-size: 1rem;
 }
+@keyframes opacity{
+    0%{opacity: 0; font-size: 2rem;}
+    100%{opacity: 1; font-size: 1rem;}
+}
+
 .notify-section{
     width: 35%;
     margin: 0 auto;
@@ -125,4 +193,8 @@ color: #E0B612;
 #submit:focus{
     outline: none;
 }
-
+#reloadMsg{
+    display: none;
+    color: green;
+    margin-top: 1rem;
+}
